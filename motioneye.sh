@@ -5,15 +5,16 @@
 #   sudo bash motioneye.sh
 
 # Install ffmpeg and other motion dependencies:
-sudo apt-get install ffmpeg libmariadb3 libpq5 libmicrohttpd12 -y
+sudo apt install ffmpeg libmariadb3 libpq5 libmicrohttpd12 -y
 
 # Install motion:
 # note: Raspbian Buster comes with motion version 4.1; it is recommended version 4.2 is installed
-wget https://github.com/Motion-Project/motion/releases/download/release-4.2.2/pi_buster_motion_4.2.2-1_armhf.deb
-dpkg -i pi_buster_motion_4.2.2-1_armhf.deb
+# wget https://github.com/Motion-Project/motion/releases/download/release-4.2.2/pi_buster_motion_4.2.2-1_armhf.deb
+sudo apt install motion
+# dpkg -i pi_buster_motion_4.2.2-1_armhf.deb
 
 # Install the dependencies from the repositories:
-sudo apt-get install python-pip python-dev libssl-dev libcurl4-openssl-dev libjpeg-dev libz-dev -y
+sudo apt install python-pip python-dev libssl-dev libcurl4-openssl-dev libjpeg-dev libz-dev -y
 
 # Install motioneye, which will automatically pull Python dependencies (tornado, jinja2, pillow and pycurl):
 sudo pip install motioneye
