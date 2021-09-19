@@ -9,9 +9,9 @@ sudo apt install ffmpeg libmariadb3 libpq5 libmicrohttpd12 -y
 
 # Install motion:
 # note: Raspbian Buster comes with motion version 4.1; it is recommended version 4.2 is installed
-# wget https://github.com/Motion-Project/motion/releases/download/release-4.2.2/pi_buster_motion_4.2.2-1_armhf.deb
-sudo apt install motion
-# dpkg -i pi_buster_motion_4.2.2-1_armhf.deb
+wget https://github.com/Motion-Project/motion/releases/download/release-4.2.2/pi_buster_motion_4.2.2-1_armhf.deb
+# sudo apt install motion
+dpkg -i pi_buster_motion_4.2.2-1_armhf.deb
 
 # Install the dependencies from the repositories:
 sudo apt install python-pip python-dev libssl-dev libcurl4-openssl-dev libjpeg-dev libz-dev -y
@@ -31,5 +31,6 @@ cp /usr/local/share/motioneye/extra/motioneye.systemd-unit-local /etc/systemd/sy
 systemctl daemon-reload
 systemctl enable motioneye
 systemctl start motioneye
+
 
 
