@@ -1,5 +1,6 @@
 #!/bin/bash
 # sript to add motioneye to a Raspberry Pi running Raspberry Pi OS
+# The script does not work with Raspberry PI OS Lite. The sample config isn't available
 #
 # run as
 #   sudo bash motioneye.sh
@@ -10,7 +11,6 @@ sudo apt install ffmpeg libmariadb3 libpq5 libmicrohttpd12 -y
 # Install motion:
 # note: Raspbian Buster comes with motion version 4.1; it is recommended version 4.2 is installed
 wget https://github.com/Motion-Project/motion/releases/download/release-4.2.2/pi_buster_motion_4.2.2-1_armhf.deb
-# sudo apt install motion
 dpkg -i pi_buster_motion_4.2.2-1_armhf.deb
 
 # Install the dependencies from the repositories:
